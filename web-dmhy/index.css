@@ -1,579 +1,576 @@
-@-moz-document url-prefix("https://share.dmhy.org/")
-{
-  body {
-    background: #000;
+body {
+  background: #000;
 
-    > div a {
-      color: rgba(96, 166, 227, 0.7);
+  > div a {
+    color: rgba(96, 166, 227, 0.7);
 
-      &:hover {
-        color: rgba(96, 166, 227, 0.9);
-      }
+    &:hover {
+      color: rgba(96, 166, 227, 0.9);
     }
+  }
 
-    .ac_results {
-      background-color: #000;
-      color: #eee;
+  .ac_results {
+    background-color: #000;
+    color: #eee;
 
-      > ul > li {
-        cursor: pointer;
+    > ul > li {
+      cursor: pointer;
 
-        &.ac_odd {
-          background-color: #1a1a1a;
-        }
+      &.ac_odd {
+        background-color: #1a1a1a;
+      }
 
-        &.ac_over {
-          background-color: rgba(96, 166, 227, 0.7);
-        }
+      &.ac_over {
+        background-color: rgba(96, 166, 227, 0.7);
       }
     }
   }
-  body::-webkit-scrollbar {
-    width: 4px;
-    height: 1px;
-    transition: all ease-in-out 0.2s;
-  }
-  body::-webkit-scrollbar-thumb {
-    border-radius: 7px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.3);
-  }
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px transparent;
-    background: rgba(0, 0, 0, 1);
-  }
-  body::-webkit-scrollbar:hover {
-    width: 7px;
-  }
-  .container .bg {
-    margin: 0;
+}
+body::-webkit-scrollbar {
+  width: 4px;
+  height: 1px;
+  transition: all ease-in-out 0.2s;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent;
+  background: rgba(0, 0, 0, 1);
+}
+body::-webkit-scrollbar:hover {
+  width: 7px;
+}
+.container .bg {
+  margin: 0;
 
-    > div.header {
-      background: linear-gradient(to right, #14243f 10%, #000 100%);
+  > div.header {
+    background: linear-gradient(to right, #14243f 10%, #000 100%);
 
-      .headerleft a {
-        position: relative;
-        display: inline-block;
-        width: 300px;
-        height: 120px;
+    .headerleft a {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 120px;
 
-        > img {
-          display: none;
-        }
-      }
-
-      .headerleft a::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: transparent url("/images/sitelogo.gif") center center
-          no-repeat;
-        filter: brightness(0.5);
-        background-size: cover;
-      }
-
-      .headerright .links {
-        background: transparent;
-
-        > a {
-          color: #eee;
-        }
-      }
-
-      .headerright .ad {
+      > img {
         display: none;
       }
+    }
 
-      .top_sort {
-        background: #000;
+    .headerleft a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent url("/images/sitelogo.gif") center center
+        no-repeat;
+      filter: brightness(0.5);
+      background-size: cover;
+    }
 
-        .menu {
-          background: transparent;
+    .headerright .links {
+      background: transparent;
 
-          > ul.nav {
-            > li {
-              > a {
-                &:hover {
-                  background: transparent;
-                }
-              }
-
-              > ul {
-                > li > a {
-                  background: #000;
-                }
-              }
-
-              &:last-child {
-                > a > font {
-                  color: #eee !important;
-                }
-              }
-            }
-          }
-        }
+      > a {
+        color: #eee;
       }
     }
 
-    > div.main {
+    .headerright .ad {
+      display: none;
+    }
+
+    .top_sort {
       background: #000;
 
-      #mini_jmd {
+      .menu {
         background: transparent;
 
-        > div.nav_title {
-          background: transparent;
-        }
-
-        > table.jmd tbody {
-          > tr.odd {
-            background-color: #000 !important;
-          }
-
-          > tr.even {
-            background-color: #000 !important;
-          }
-
-          > tr > th {
-            background: transparent;
-          }
-
-          > tr > td a {
-            color: rgba(96, 166, 227, 0.7);
-            border-color: transparent;
-            transition: all ease-in-out 0.3s;
-            /*                     border-radius: 5px; */
-            /*                     background-color: #fff; */
-
-            &:hover {
-              color: rgba(96, 166, 227, 1);
+        > ul.nav {
+          > li {
+            > a {
+              &:hover {
+                background: transparent;
+              }
             }
-          }
 
-          > tr.today {
-            background-color: rgba(96, 166, 227, 0.2) !important;
-
-            > td a {
-              color: rgba(96, 166, 227, 0.9);
-            }
-          }
-        }
-      }
-
-      > div.quick_search {
-        background: rgb(44, 46, 47);
-        border-color: transparent;
-        padding: 3px;
-        border-radius: 7px;
-        transition: all ease-in-out 0.3s;
-
-        &:hover {
-          border-color: rgba(255, 255, 255, 0.7);
-        }
-
-        .quick_input {
-          background: transparent;
-          border-color: transparent;
-          outline: none;
-          caret-color: #eee;
-          color: #eee;
-
-          &:focus {
-            border-color: transparent;
-          }
-        }
-
-        .formButton {
-          background: transparent;
-          cursor: pointer;
-          border-radius: 5px;
-          color: rgba(96, 166, 227, 0.7);
-          border-color: rgba(96, 166, 227, 0.7);
-          transition: all ease-in-out 0.2s;
-
-          &:hover {
-            color: #eee;
-            background: rgba(96, 166, 227, 0.3);
-            border-color: transparent;
-          }
-        }
-
-        > form {
-          display: inline-block;
-          width: 100%;
-
-          > a {
-            color: #eee;
-          }
-
-          #AdvSearch:has(p) {
-            padding: 5px 0 2px 0;
-            margin-top: 5px;
-            border-top: 1px dashed #eee;
-
-            > p > select {
-              color: #eee;
-              background: #000;
-              border-color: transparent;
-
-              > option {
-                color: #eee;
+            > ul {
+              > li > a {
                 background: #000;
               }
             }
 
-            > p > a {
-              color: #60a6e3;
+            &:last-child {
+              > a > font {
+                color: #eee !important;
+              }
             }
           }
         }
       }
+    }
+  }
 
-      .announce #announce_marquee > a {
-        color: rgba(96, 166, 227, 0.7);
+  > div.main {
+    background: #000;
+
+    #mini_jmd {
+      background: transparent;
+
+      > div.nav_title {
+        background: transparent;
       }
 
-      > div.table:not(.clear) {
+      > table.jmd tbody {
+        > tr.odd {
+          background-color: #000 !important;
+        }
+
+        > tr.even {
+          background-color: #000 !important;
+        }
+
+        > tr > th {
+          background: transparent;
+        }
+
+        > tr > td a {
+          color: rgba(96, 166, 227, 0.7);
+          border-color: transparent;
+          transition: all ease-in-out 0.3s;
+          /*                     border-radius: 5px; */
+          /*                     background-color: #fff; */
+
+          &:hover {
+            color: rgba(96, 166, 227, 1);
+          }
+        }
+
+        > tr.today {
+          background-color: rgba(96, 166, 227, 0.2) !important;
+
+          > td a {
+            color: rgba(96, 166, 227, 0.9);
+          }
+        }
+      }
+    }
+
+    > div.quick_search {
+      background: rgb(44, 46, 47);
+      border-color: transparent;
+      padding: 3px;
+      border-radius: 7px;
+      transition: all ease-in-out 0.3s;
+
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.7);
+      }
+
+      .quick_input {
         background: transparent;
+        border-color: transparent;
+        outline: none;
+        caret-color: #eee;
+        color: #eee;
+
+        &:focus {
+          border-color: transparent;
+        }
+      }
+
+      .formButton {
+        background: transparent;
+        cursor: pointer;
         border-radius: 5px;
+        color: rgba(96, 166, 227, 0.7);
+        border-color: rgba(96, 166, 227, 0.7);
+        transition: all ease-in-out 0.2s;
 
-        .nav_title {
-          background: transparent;
-        }
-
-        .content {
-          color: #999;
+        &:hover {
+          color: #eee;
+          background: rgba(96, 166, 227, 0.3);
+          border-color: transparent;
         }
       }
 
-      > div.table.clear {
-        background: transparent;
+      > form {
+        display: inline-block;
+        width: 100%;
 
-        .nav_title {
-          background: transparent;
+        > a {
+          color: #eee;
         }
 
-        .tablesorter {
-          background: transparent;
+        #AdvSearch:has(p) {
+          padding: 5px 0 2px 0;
+          margin-top: 5px;
+          border-top: 1px dashed #eee;
 
-          > thead > tr > th {
-            background-color: #2a2828 !important;
+          > p > select {
+            color: #eee;
+            background: #000;
+            border-color: transparent;
+
+            > option {
+              color: #eee;
+              background: #000;
+            }
           }
 
-          > tbody {
-            > tr.odd {
-              background-color: #111 !important;
+          > p > a {
+            color: #60a6e3;
+          }
+        }
+      }
+    }
 
-              :hover {
-                background-color: #292929 !important;
-              }
+    .announce #announce_marquee > a {
+      color: rgba(96, 166, 227, 0.7);
+    }
 
-              > td {
-                background-color: inherit !important;
-              }
+    > div.table:not(.clear) {
+      background: transparent;
+      border-radius: 5px;
+
+      .nav_title {
+        background: transparent;
+      }
+
+      .content {
+        color: #999;
+      }
+    }
+
+    > div.table.clear {
+      background: transparent;
+
+      .nav_title {
+        background: transparent;
+      }
+
+      .tablesorter {
+        background: transparent;
+
+        > thead > tr > th {
+          background-color: #2a2828 !important;
+        }
+
+        > tbody {
+          > tr.odd {
+            background-color: #111 !important;
+
+            :hover {
+              background-color: #292929 !important;
             }
 
-            > tr.even {
-              background-color: #000 !important;
+            > td {
+              background-color: inherit !important;
+            }
+          }
 
-              > td {
-                background-color: inherit !important;
-              }
+          > tr.even {
+            background-color: #000 !important;
+
+            > td {
+              background-color: inherit !important;
+            }
+          }
+
+          > tr {
+            &:hover {
+              background-color: #292929 !important;
             }
 
-            > tr {
-              &:hover {
-                background-color: #292929 !important;
-              }
+            > td {
+              color: #ccc;
 
-              > td {
-                color: #ccc;
+              &.title {
+                position: relative;
+                padding-right: 55px;
 
-                &.title {
-                  position: relative;
-                  padding-right: 55px;
-
-                  &:hover {
-                    > a {
-                      color: rgba(96, 166, 227, 1);
-                    }
-
-                    > span.tag {
-                      background-color: rgba(96, 166, 227, 0.5) !important;
-                    }
-                  }
-
+                &:hover {
                   > a {
-                    border-color: rgba(96, 166, 227, 0.9);
-                    color: rgba(96, 166, 227, 0.9) !important;
+                    color: rgba(96, 166, 227, 1);
                   }
 
                   > span.tag {
-                    border: 1px solid transparent !important;
-                    background-color: #292929 !important;
-                    border-radius: 30px !important;
-                    padding: 0px 8px !important;
-                    color: white !important;
-                    line-height: 20px !important;
-                    display: inline-block !important;
-                    margin: 2px;
-                    transition: all ease-in-out 0.1s;
+                    background-color: rgba(96, 166, 227, 0.5) !important;
+                  }
+                }
 
-                    > a {
-                      color: rgb(255, 255, 255, 80%);
+                > a {
+                  border-color: rgba(96, 166, 227, 0.9);
+                  color: rgba(96, 166, 227, 0.9) !important;
+                }
 
-                      &:hover {
-                        color: rgb(255, 255, 255, 90%);
-                        background-color: transparent !important;
-                        border-color: #eee;
-                      }
+                > span.tag {
+                  border: 1px solid transparent !important;
+                  background-color: #292929 !important;
+                  border-radius: 30px !important;
+                  padding: 0px 8px !important;
+                  color: white !important;
+                  line-height: 20px !important;
+                  display: inline-block !important;
+                  margin: 2px;
+                  transition: all ease-in-out 0.1s;
+
+                  > a {
+                    color: rgb(255, 255, 255, 80%);
+
+                    &:hover {
+                      color: rgb(255, 255, 255, 90%);
+                      background-color: transparent !important;
+                      border-color: #eee;
                     }
                   }
-
-                  > span:not(.tag) {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    display: flex;
-                    align-items: center;
-                  }
                 }
 
-                > a.sort-1 > font {
-                  color: #958282;
+                > span:not(.tag) {
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  display: flex;
+                  align-items: center;
                 }
+              }
+
+              > a.sort-1 > font {
+                color: #958282;
               }
             }
           }
         }
       }
+    }
 
-      /* 详情 */
-      > div.topics_bk {
-        background: #000;
+    /* 详情 */
+    > div.topics_bk {
+      background: #000;
 
-        .user-sidebar .box {
-          background: transparent;
-          border-color: #4d4d4d;
+      .user-sidebar .box {
+        background: transparent;
+        border-color: #4d4d4d;
 
-          > p a {
+        > p a {
+          color: rgba(96, 166, 227, 0.7);
+        }
+
+        &.topics_cult {
+          > div a {
+            color: rgba(96, 166, 227, 0.7);
+          }
+        }
+      }
+
+      .topic-main .box {
+        background: transparent;
+        border-color: #4d4d4d;
+
+        &.topic-title {
+          > h3 {
+            color: #eee;
+            border-color: #4d4d4d;
+          }
+
+          .resource-info {
+            color: #b3b3b3;
+            text-shadow: none;
+
+            > ul > li > a {
+              color: rgba(96, 166, 227, 0.7);
+            }
+          }
+        }
+
+        &.topic-nfo {
+          color: #b3b3b3;
+
+          > p a,
+          a {
             color: rgba(96, 166, 227, 0.7);
           }
 
-          &.topics_cult {
-            > div a {
-              color: rgba(96, 166, 227, 0.7);
+          > p strong,
+          strong,
+          div strong {
+            color: #eee;
+          }
+        }
+
+        &.ui-tabs {
+          .ui-widget-header {
+            background: transparent;
+            padding: 0;
+
+            .ui-state-active {
+              background: rgba(96, 166, 227, 0.7);
+              border-color: transparent;
+            }
+          }
+
+          .ui-tabs-panel {
+            color: #eee;
+
+            > p > a {
+              color: rgba(96, 166, 227, 1);
+            }
+
+            .file_list {
+              background: transparent;
+
+              > ul > li {
+                background-color: #1a1a1a;
+
+                &.odd {
+                  background-color: #2f2f2f;
+                }
+              }
             }
           }
         }
 
-        .topic-main .box {
-          background: transparent;
-          border-color: #4d4d4d;
+        &.comment {
+          .declaration {
+            color: #b94a4a;
+          }
 
-          &.topic-title {
-            > h3 {
-              color: #eee;
-              border-color: #4d4d4d;
-            }
+          .comment_recent_main #comment_recent {
+            background: transparent;
 
-            .resource-info {
-              color: #b3b3b3;
-              text-shadow: none;
+            > tbody > tr {
+              background: transparent;
 
-              > ul > li > a {
-                color: rgba(96, 166, 227, 0.7);
+              > td {
+                background: transparent;
+
+                &.infotable {
+                  color: #eee;
+
+                  > span {
+                    color: rgba(96, 166, 227, 0.7);
+                  }
+                }
+
+                &.comment_con {
+                  .title {
+                    color: #eee;
+                  }
+
+                  &:last-child {
+                    color: #b3b3b3;
+                  }
+                }
               }
             }
           }
 
-          &.topic-nfo {
-            color: #b3b3b3;
+          #comment_add {
+            color: #eee;
+            background: transparent;
 
-            > p a,
-            a {
+            > table a {
               color: rgba(96, 166, 227, 0.7);
             }
 
-            > p strong,
-            strong,
-            div strong {
-              color: #eee;
-            }
-          }
-
-          &.ui-tabs {
-            .ui-widget-header {
+            .add_title {
               background: transparent;
-              padding: 0;
-
-              .ui-state-active {
-                background: rgba(96, 166, 227, 0.7);
-                border-color: transparent;
-              }
             }
 
-            .ui-tabs-panel {
-              color: #eee;
-
-              > p > a {
-                color: rgba(96, 166, 227, 1);
-              }
-
-              .file_list {
-                background: transparent;
-
-                > ul > li {
-                  background-color: #1a1a1a;
-
-                  &.odd {
-                    background-color: #2f2f2f;
-                  }
-                }
-              }
-            }
-          }
-
-          &.comment {
-            .declaration {
-              color: #b94a4a;
+            .add_advert {
+              color: #b3b3b3;
             }
 
-            .comment_recent_main #comment_recent {
-              background: transparent;
-
-              > tbody > tr {
-                background: transparent;
-
-                > td {
-                  background: transparent;
-
-                  &.infotable {
-                    color: #eee;
-
-                    > span {
-                      color: rgba(96, 166, 227, 0.7);
-                    }
-                  }
-
-                  &.comment_con {
-                    .title {
-                      color: #eee;
-                    }
-
-                    &:last-child {
-                      color: #b3b3b3;
-                    }
-                  }
-                }
-              }
-            }
-
-            #comment_add {
-              color: #eee;
-              background: transparent;
-
-              > table a {
-                color: rgba(96, 166, 227, 0.7);
-              }
-
-              .add_title {
-                background: transparent;
-              }
-
-              .add_advert {
+            #comment_add_form > table.comment_add_table tbody tr td {
+              > input {
                 color: #b3b3b3;
-              }
+                outline: none;
+                background: transparent;
 
-              #comment_add_form > table.comment_add_table tbody tr td {
-                > input {
-                  color: #b3b3b3;
-                  outline: none;
-                  background: transparent;
+                &.formButton {
+                  color: rgba(96, 166, 227, 1);
+                  background: rgba(96, 166, 227, 0.2);
+                  border-color: rgba(96, 166, 227, 0.5);
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: all ease-in-out 0.2s;
 
-                  &.formButton {
-                    color: rgba(96, 166, 227, 1);
-                    background: rgba(96, 166, 227, 0.2);
-                    border-color: rgba(96, 166, 227, 0.5);
-                    border-radius: 5px;
-                    cursor: pointer;
-                    transition: all ease-in-out 0.2s;
-
-                    &:hover {
-                      color: #eee;
-                      background: rgba(96, 166, 227, 0.7);
-                      border-color: transparent;
-                    }
+                  &:hover {
+                    color: #eee;
+                    background: rgba(96, 166, 227, 0.7);
+                    border-color: transparent;
                   }
                 }
-                > textarea {
-                  color: #b3b3b3;
-                  outline: none;
-                  background: transparent;
-                }
+              }
+              > textarea {
+                color: #b3b3b3;
+                outline: none;
+                background: transparent;
               }
             }
           }
         }
       }
+    }
 
-      /* 登录注册 */
-      > div.table > form[name="form1"] > table.list_style {
+    /* 登录注册 */
+    > div.table > form[name="form1"] > table.list_style {
+      background: transparent;
+
+      > tbody > tr {
         background: transparent;
 
-        > tbody > tr {
-          background: transparent;
+        > td.text_right {
+          color: #eee;
+        }
 
-          > td.text_right {
+        > td {
+          > a {
+            color: rgba(96, 166, 227, 0.7);
+          }
+
+          > input {
             color: #eee;
+            outline: none;
+            background: transparent;
           }
 
-          > td {
-            > a {
-              color: rgba(96, 166, 227, 0.7);
-            }
+          > select {
+            color: #eee;
+            background: #000;
+          }
+        }
 
-            > input {
-              color: #eee;
-              outline: none;
-              background: transparent;
-            }
+        &.tfooter > td {
+          > button {
+            color: rgba(96, 166, 227, 1);
+            background: #000;
+            border-radius: 5px;
+            cursor: pointer;
 
-            > select {
+            &:hover {
               color: #eee;
-              background: #000;
+              background: rgba(96, 166, 227, 0.7);
+              border-color: transparent;
             }
           }
 
-          &.tfooter > td {
-            > button {
-              color: rgba(96, 166, 227, 1);
-              background: #000;
-              border-radius: 5px;
-              cursor: pointer;
+          > input {
+            color: rgba(96, 166, 227, 1);
+            background: #000;
+            border-radius: 5px;
+            cursor: pointer;
 
-              &:hover {
-                color: #eee;
-                background: rgba(96, 166, 227, 0.7);
-                border-color: transparent;
-              }
-            }
-
-            > input {
-              color: rgba(96, 166, 227, 1);
-              background: #000;
-              border-radius: 5px;
-              cursor: pointer;
-
-              &:hover {
-                color: #eee;
-                background: rgba(96, 166, 227, 0.7);
-                border-color: transparent;
-              }
+            &:hover {
+              color: #eee;
+              background: rgba(96, 166, 227, 0.7);
+              border-color: transparent;
             }
           }
         }
