@@ -121,6 +121,7 @@ body::-webkit-scrollbar:hover {
 
     #mini_jmd {
       background: transparent;
+      border-radius: 10px;
 
       > div.nav_title {
         background: transparent;
@@ -167,6 +168,8 @@ body::-webkit-scrollbar:hover {
       padding: 3px;
       border-radius: 7px;
       transition: all ease-in-out 0.3s;
+      margin-top: 10px;
+      margin-bottom: 5px;
 
       &:hover {
         border-color: rgba(255, 255, 255, 0.7);
@@ -247,8 +250,14 @@ body::-webkit-scrollbar:hover {
       }
     }
 
+    > div.clear:not(.table):has(.announce) > div:first-child {
+      width: unset !important;
+    }
+
     > div.table.clear {
       background: transparent;
+      border-radius: 10px;
+      margin-top: 12px;
 
       .nav_title {
         background: transparent;
@@ -256,6 +265,8 @@ body::-webkit-scrollbar:hover {
 
       .tablesorter {
         background: transparent;
+        border-spacing: 0;
+        padding: 0 3px;
 
         > thead > tr > th {
           background-color: #2a2828 !important;
@@ -289,6 +300,14 @@ body::-webkit-scrollbar:hover {
 
             > td {
               color: #ccc;
+
+              &:first-child {
+                border-radius: 12px 0 0 12px;
+              }
+
+              &:last-child {
+                border-radius: 0 12px 12px 0;
+              }
 
               &.title {
                 position: relative;
