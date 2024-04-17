@@ -49,14 +49,17 @@ body::-webkit-scrollbar:hover {
   > div.header {
     background: linear-gradient(to right, #14243f 10%, #000 100%);
 
-    .headerleft a {
-      position: relative;
-      display: inline-block;
-      width: 300px;
-      height: 120px;
+    .headerleft {
+      height: 100px;
+      a {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        width: 300px;
 
-      > img {
-        display: none;
+        > img {
+          display: none;
+        }
       }
     }
 
@@ -87,6 +90,7 @@ body::-webkit-scrollbar:hover {
 
     .top_sort {
       background: #000;
+      padding-top: 5px;
 
       .menu {
         background: transparent;
@@ -140,15 +144,18 @@ body::-webkit-scrollbar:hover {
           background: transparent;
         }
 
-        > tr > td a {
-          color: rgba(96, 166, 227, 0.7);
-          border-color: transparent;
-          transition: all ease-in-out 0.3s;
-          /*                     border-radius: 5px; */
-          /*                     background-color: #fff; */
+        > tr > td {
+          padding: 3px 0;
+          > a {
+            color: rgba(96, 166, 227, 0.7);
+            border-color: transparent;
+            transition: all ease-in-out 0.3s;
+            /*border-radius: 5px; */
+            /*background-color: #fff; */
 
-          &:hover {
-            color: rgba(96, 166, 227, 1);
+            &:hover {
+              color: rgba(96, 166, 227, 1);
+            }
           }
         }
 
@@ -163,8 +170,8 @@ body::-webkit-scrollbar:hover {
     }
 
     > div.quick_search {
-      background: rgb(44, 46, 47);
-      border-color: transparent;
+      background: rgba(44, 46, 47, 0.8);
+      border-color: rgba(44, 46, 47, 1);
       padding: 3px;
       border-radius: 7px;
       transition: all ease-in-out 0.3s;
@@ -172,7 +179,7 @@ body::-webkit-scrollbar:hover {
       margin-bottom: 5px;
 
       &:hover {
-        border-color: rgba(255, 255, 255, 0.7);
+        border-color: rgba(255, 255, 255, 0.4);
       }
 
       .quick_input {
@@ -261,6 +268,7 @@ body::-webkit-scrollbar:hover {
 
       .nav_title {
         background: transparent;
+        padding: 5px;
       }
 
       .tablesorter {
@@ -270,11 +278,12 @@ body::-webkit-scrollbar:hover {
 
         > thead > tr > th {
           background-color: #2a2828 !important;
+          padding: 7px 5px;
         }
 
         > tbody {
           > tr.odd {
-            background-color: #111 !important;
+            background-color: #181818 !important;
 
             :hover {
               background-color: #292929 !important;
@@ -298,8 +307,9 @@ body::-webkit-scrollbar:hover {
               background-color: #292929 !important;
             }
 
-            > td {
+            & > td {
               color: #ccc;
+              padding: 7px 5px;
 
               &:first-child {
                 border-radius: 12px 0 0 12px;
@@ -319,7 +329,12 @@ body::-webkit-scrollbar:hover {
                   }
 
                   > span.tag {
-                    background-color: rgba(96, 166, 227, 0.5) !important;
+                    /*background-color: rgba(96, 166, 227, 0.5) !important;*/
+                    background-image: linear-gradient(
+                      to top,
+                      #637099 0%,
+                      #459db3 100%
+                    ) !important;
                   }
                 }
 
@@ -358,6 +373,12 @@ body::-webkit-scrollbar:hover {
                   display: flex;
                   align-items: center;
                 }
+              }
+
+              > a.download-pp {
+                opacity: 0.8;
+                width: 33px;
+                border-radius: 5px;
               }
 
               > a.sort-1 > font {
